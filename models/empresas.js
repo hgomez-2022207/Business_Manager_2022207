@@ -23,4 +23,4 @@ const BusinesSchema = Schema({
     }
 });
 
-module.exports = model('Busine',BusinesSchemaSchema);
+module.exports = model('Busines',BusinesSchema);
