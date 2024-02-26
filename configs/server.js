@@ -6,7 +6,8 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 
-import empresaRoutes from '../src ';
+import usuarioRoutes from '../src/user/user.model.js';
+import empresaRoutes from '../src/busines/empresas.model.js';
 
 class Server{
     constructor(){
@@ -33,7 +34,8 @@ class Server{
     }
 
     routes(){
-        this.app.use(this.empresaPath, require('../routes/empresa.routes'));
+        this.app.use(this.usuarioPath,usuarioRoutes)
+        this.app.use(this.empresaPath, empresaRoutes);
     }
 
     listen(){
