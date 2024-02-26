@@ -6,6 +6,8 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 
+import empresaRoutes from '../src ';
+
 class Server{
     constructor(){
         this.app = express();

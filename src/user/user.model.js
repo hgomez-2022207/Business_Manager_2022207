@@ -23,6 +23,11 @@ const UsuarioSchema = mongoose.Schema({
     google:{
         type: Boolean,
         default: true
+    },
+    role:{
+        type:String,
+        required:true,
+        enum: [ADMIN_ROLE]
     }
 });
 
