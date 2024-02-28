@@ -21,6 +21,8 @@ const BusinesSchema = Schema({
         type: Boolean,
         default: true
     }
+},{
+    versionKey: false // Deshabilita la versión del documento
 });
 
 module.exports = model('Busines',BusinesSchema);
