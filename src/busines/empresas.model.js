@@ -22,7 +22,7 @@ const BusinesSchema = Schema({
         default: true
     }
 },{
-    versionKey: false // Deshabilita la versión del documento
+    versionKey: false
 });
 
-module.exports = model('Busines',BusinesSchema);
+export default model('Busines', BusinesSchema);
