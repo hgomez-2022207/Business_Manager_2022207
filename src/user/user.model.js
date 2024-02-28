@@ -29,6 +29,8 @@ const UsuarioSchema = mongoose.Schema({
         required:true,
         enum: [ADMIN_ROLE]
     }
+},{
+    versionKey: false // Deshabilita la versión del documento
 });
 
 export default mongoose.model('User', UsuarioSchema);
