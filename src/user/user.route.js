@@ -9,8 +9,8 @@ export default Router;
 
 Router.post('/',
     [
-        check('name','invalid user').not().isEmpty(),
-        check('email','invalid email').not().isEmpty(),
+        check('name','invalid user').not().isEmpty().isLength({min:6}),
+        check('email','invalid email').not().isEmpty().isEmail(),
         check('password','password is not valid'),
         validarCampos
     ],UserPost
