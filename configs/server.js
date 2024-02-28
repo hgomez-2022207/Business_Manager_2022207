@@ -14,6 +14,7 @@ class Server{
         this.app = express();
         this.port = process.env.PORT;
         this.empresaPath = '/api/empresas';
+        this.usuarioPath = '/api/usuarios';
 
         this.conectarDB();
         this.middlewares();
