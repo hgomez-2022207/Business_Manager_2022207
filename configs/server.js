@@ -6,7 +6,7 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 
-import usuarioRoutes from '../src/user/user.model.js';
+import usuarioRoutes from '../src/user/user.route.js';
 import empresaRoutes from '../src/busines/empresas.model.js';
 
 class Server{
