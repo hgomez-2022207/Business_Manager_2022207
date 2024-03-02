@@ -7,7 +7,7 @@ import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 
 import usuarioRoutes from '../src/user/user.route.js';
-import empresaRoutes from '../src/busines/empresas.route.js';
+import empresaRoutes from '../src/busines/empresa.route.js';
 
 class Server{
     constructor(){
