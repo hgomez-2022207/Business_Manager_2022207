@@ -1,6 +1,6 @@
-import {Schema, model} from 'mongoose';
+import mongoose from 'mongoose';
 
-const BusinesSchema = Schema({
+const BusinesSchema = mongoose.Schema({
     name:{
         type:String,
         required: [true, 'El nombre de la empresa.']
@@ -25,4 +25,4 @@ const BusinesSchema = Schema({
     versionKey: false
 });
 
-export default model('Busines', BusinesSchema);
+export default mongoose.model('Busines', BusinesSchema);
