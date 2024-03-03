@@ -18,16 +18,17 @@ export const empresaPost = async (req, res) => {
 }
 
 export const empresaPut = async (req, res = response) =>{
-  const{ _name } = req.params;
-  const { name, ...resto } = req.body;
+    const { id } = req.params;
+    const { _id, ...rest } = req.body;
 
-  await Busines.findByIdAndUpdate(id, name)
-  const busines = await Busines.findByIdAndUpdate(id, name, ...resto);
+    await Busines.findByIdAndUpdate(id, rest);
 
-  res.status(200).json({
-      msg: "Los datos de la empresa han sido Actualizados",
-      busines
-  });
+    const busines = await Busines.findOne({ _id: id });
+
+    res.status(200).json({
+        msg: 'Business Actualizado',
+        busines,
+    });
 }
 
 export const getEmpresaByName = async(req, res = response) =>{
@@ -90,4 +91,25 @@ export const generarExcel = async (busines) => {
       console.error('Error al generar el reporte de Excel:', error);
       throw error;
     }
-  };
+};
+
+  export const getEmpresaByCat = async (req, res) => {
+    try {
+      console.log('getCategoria')
+        const query = {state : true};
+
+        const category = await Busines.distinct('category', query);
+
+        category.sort();
+
+        res.status(200).json({
+            category: category
+        });
+    
+    } catch (e){
+        console.log(e);
+        res.status(400).json({
+            msg: "No mes posible listar comunicate con el administrador"
+        })
+    }
+}
