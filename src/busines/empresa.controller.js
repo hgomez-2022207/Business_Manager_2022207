@@ -17,6 +17,19 @@ export const empresaPost = async (req, res) => {
     });
 }
 
+export const empresaPut = async (req, res = response) =>{
+  const{ _name } = req.params;
+  const { name, ...resto } = req.body;
+
+  await Busines.findByIdAndUpdate(id, name)
+  const busines = await Busines.findByIdAndUpdate(id, name, ...resto);
+
+  res.status(200).json({
+      msg: "Los datos de la empresa han sido Actualizados",
+      busines
+  });
+}
+
 export const getEmpresaByName = async(req, res = response) =>{
     const { name } = req.params;
     const empresa = await Busines.findOne({name:name});
