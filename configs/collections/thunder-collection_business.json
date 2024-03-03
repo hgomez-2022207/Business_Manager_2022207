@@ -1,0 +1,95 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "business",
+    "dateExported": "2024-03-03T04:42:40.056Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "26396b4b-8681-4f05-ade7-0ab7fd15eb55",
+            "colId": "bc9701e6-393c-4b0a-aa91-4a2e51e1b47c",
+            "containerId": "",
+            "name": "businessPost",
+            "url": "http://localhost:8080/api/empresas",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-29T07:47:25.305Z",
+            "modified": "2024-03-03T04:20:59.140Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzZjVhYTc3NTFiNzQ2ZWI3ODMzYTYiLCJpYXQiOjE3MDk0Mzg0MDcsImV4cCI6MTcwOTQ0MjAwN30.nsip1fcdnSH2mqt3qbbQGQbq8LdoMt3RzeA2IZOs28w"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"ManoplaPuebla\",\n  \"level\":\"Alto\",\n  \"age\":\"10\",\n  \"category\":\"limpieza\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "176074a1-581e-4642-a79d-e6a33e9e56b4",
+            "colId": "bc9701e6-393c-4b0a-aa91-4a2e51e1b47c",
+            "containerId": "",
+            "name": "post excel",
+            "url": "http://localhost:8080/api/empresas/generar-reporte",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-03T00:26:55.523Z",
+            "modified": "2024-03-03T04:02:42.659Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzZjVhYTc3NTFiNzQ2ZWI3ODMzYTYiLCJpYXQiOjE3MDk0Mzg0MDcsImV4cCI6MTcwOTQ0MjAwN30.nsip1fcdnSH2mqt3qbbQGQbq8LdoMt3RzeA2IZOs28w"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "45d2215c-ddec-433a-8faa-0ea09b9655c8",
+            "colId": "bc9701e6-393c-4b0a-aa91-4a2e51e1b47c",
+            "containerId": "",
+            "name": "businesPut",
+            "url": "http://localhost:8080/api/empresas/65e38e4f86db6b1e92bfe9c6",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-03T02:47:40.020Z",
+            "modified": "2024-03-03T04:32:24.813Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzZjVhYTc3NTFiNzQ2ZWI3ODMzYTYiLCJpYXQiOjE3MDk0Mzg0MDcsImV4cCI6MTcwOTQ0MjAwN30.nsip1fcdnSH2mqt3qbbQGQbq8LdoMt3RzeA2IZOs28w"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Apple3333\",\n  \"level\":\"Bajo\",\n  \"age\":\"20\",\n  \"category\":\"entretiniment\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "342cf8c8-5670-4045-a950-b3471a63699f",
+            "colId": "bc9701e6-393c-4b0a-aa91-4a2e51e1b47c",
+            "containerId": "",
+            "name": "getBusines",
+            "url": "http://localhost:8080/api/empresas/list",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-03T03:53:05.141Z",
+            "modified": "2024-03-03T04:34:51.766Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzZjVhYTc3NTFiNzQ2ZWI3ODMzYTYiLCJpYXQiOjE3MDk0Mzg0MDcsImV4cCI6MTcwOTQ0MjAwN30.nsip1fcdnSH2mqt3qbbQGQbq8LdoMt3RzeA2IZOs28w"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
