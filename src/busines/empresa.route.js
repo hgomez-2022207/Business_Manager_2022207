@@ -4,7 +4,8 @@ import {empresaPost,
         getEmpresaByName,
         obtenerEmpresas,
         empresaPut,
-        generarExcel} from "./empresa.controller.js";
+        generarExcel,
+        getEmpresaByCat} from "./empresa.controller.js";
 import { existeEmpresaByName } from "../helpers/db-validators.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
@@ -35,8 +36,8 @@ router.put(
 );
 
 router.post('/generar-reporte', async (req, res) => {
-  validarJWT
   try{
+    validarJWT
     const busines = await obtenerEmpresas();
 
     const directorioDeReportes = './reporte';
@@ -65,16 +66,6 @@ router.post('/generar-reporte', async (req, res) => {
 });
 
 
-
-router.get(
-    "/:name",
-    [
-      validarJWT,
-      check("name", "El nombre no es válido"),
-      check("name").custom(existeEmpresaByName),
-      validarCampos,
-    ],
-    getEmpresaByName
-  );
+router.get("/list",[validarJWT], getEmpresaByCat);
 
 export default router;
