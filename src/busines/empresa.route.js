@@ -3,6 +3,7 @@ import { check } from "express-validator";
 import {empresaPost,
         getEmpresaByName,
         obtenerEmpresas,
+        empresaPut,
         generarExcel} from "./empresa.controller.js";
 import { existeEmpresaByName } from "../helpers/db-validators.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
@@ -21,7 +22,20 @@ router.post('/',
 
 );
 
+router.put(
+  '/:id',
+  [
+    validarJWT,
+    check('name','invalid name').not().isEmpty(),
+    check('level','unwritten level').not().isEmpty(),
+    check('age','unwritten age').not().isEmpty(),
+    check('category','unwritten category').not().isEmpty(),        
+    validarCampos
+  ],empresaPut
+);
+
 router.post('/generar-reporte', async (req, res) => {
+  validarJWT
   try{
     const busines = await obtenerEmpresas();
 
