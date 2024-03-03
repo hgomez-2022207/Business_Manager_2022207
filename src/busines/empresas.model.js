@@ -10,7 +10,7 @@ const BusinesSchema = mongoose.Schema({
         required: [true, 'El nivel de impacto']
     },
     age:{
-        type:Number,
+        type:String,
         required: [true, 'Edad de la empresa']
     },
     category:{
